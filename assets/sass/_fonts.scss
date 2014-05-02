@@ -1,48 +1,23 @@
-@font-face {
-  font-family: 'FiraSans';
-  src: url('../fonts/FiraSans/FiraSans-Regular.eot');
-  src: url('../fonts/FiraSans/FiraSans-Regular.woff') format('woff');
-  font-weight: normal;
-  font-style: normal;
-}
-@font-face {
-  font-family: 'FiraSans';
-  src: url('../fonts/FiraSans/FiraSans-RegularItalic.eot');
-  src: url('../fonts/FiraSans/FiraSans-RegularItalic.woff') format('woff');
-  font-weight: normal;
-  font-style: italic;
-}
-@font-face {
-  font-family: 'FiraSans';
-  src: url('../fonts/FiraSans/FiraSans-Bold.eot');
-  src: url('../fonts/FiraSans/FiraSans-Bold.woff') format('woff');
-  font-weight: bold;
-  font-style: normal;
-}
-@font-face {
-  font-family: 'FiraSans';
-  src: url('../fonts/FiraSans/FiraSans-BoldItalic.eot');
-  src: url('../fonts/FiraSans/FiraSans-BoldItalic.woff') format('woff');
-  font-weight: bold;
-  font-style: italic;
-}
-@font-face {
-  font-family: 'FiraSansLight';
-  src: url('../fonts/FiraSans/FiraSans-Light.eot');
-  src: url('../fonts/FiraSans/FiraSans-Light.woff') format('woff');
-  font-weight: normal;
-  font-style: normal;
-}
-@font-face {
-  font-family: 'FiraSansLight';
-  src: url('../fonts/FiraSans/FiraSans-LightItalic.eot');
-  src: url('../fonts/FiraSans/FiraSans-LightItalic.woff') format('woff');
-  font-weight: normal;
-  font-style: italic;
-}
+@import "compass/css3/font-face";
+
+@include font-face("SourceSansPro", font-files("../fonts/SourceSansPro/Light.woff", woff,
+                                               "../fonts/SourceSansPro/Light.ttf", truetype,
+                                               "../fonts/SourceSansPro/Light.svg", svg),
+                                               "../fonts/SourceSansPro/Light.eot", 300);
+@include font-face("SourceSansPro", font-files("../fonts/SourceSansPro/LightIt.woff", woff,
+                                               "../fonts/SourceSansPro/LightIt.ttf", truetype,
+                                               "../fonts/SourceSansPro/LightIt.svg", svg),
+                                               "../fonts/SourceSansPro/LightIt.eot", 300, italic);
+@include font-face("SourceSansPro", font-files("../fonts/SourceSansPro/Bold.woff", woff,
+                                               "../fonts/SourceSansPro/Bold.ttf", truetype,
+                                               "../fonts/SourceSansPro/Bold.svg", svg),
+                                               "../fonts/SourceSansPro/Bold.eot", bold);
+@include font-face("SourceSansPro", font-files("../fonts/SourceSansPro/BoldIt.woff", woff,
+                                               "../fonts/SourceSansPro/BoldIt.ttf", truetype,
+                                               "../fonts/SourceSansPro/BoldIt.svg", svg),
+                                               "../fonts/SourceSansPro/BoldIt.eot", bold, italic);
 
 $font-size: 62.5%;
-$fira-sans-regular: 'FiraSans', 'Helvetica Neue', 'Helvetica', Arial, sans-serif;
-$fira-sans-light: 'FiraSansLight', 'Helvetica Neue', 'Helvetica', Arial, sans-serif;
-
-
+$font-base: 'SourceSansPro', 'Helvetica Neue', 'Helvetica', Arial, sans-serif;
+$font-weight-light: 300;
+$font-weight-bold: bold;
