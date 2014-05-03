@@ -2,23 +2,22 @@
 
 $font-path: "../fonts" !default;
 
-@include font-face("SourceSansPro", font-files("../fonts/SourceSansPro/Light.woff", woff,
-                                               "../fonts/SourceSansPro/Light.ttf", truetype,
-                                               "../fonts/SourceSansPro/Light.svg", svg),
-                                               "../fonts/SourceSansPro/Light.eot", 300);
-@include font-face("SourceSansPro", font-files("../fonts/SourceSansPro/LightIt.woff", woff,
-                                               "../fonts/SourceSansPro/LightIt.ttf", truetype,
-                                               "../fonts/SourceSansPro/LightIt.svg", svg),
-                                               "../fonts/SourceSansPro/LightIt.eot", 300, italic);
-@include font-face("SourceSansPro", font-files("../fonts/SourceSansPro/Bold.woff", woff,
-                                               "../fonts/SourceSansPro/Bold.ttf", truetype,
-                                               "../fonts/SourceSansPro/Bold.svg", svg),
-                                               "../fonts/SourceSansPro/Bold.eot", bold);
-@include font-face("SourceSansPro", font-files("../fonts/SourceSansPro/BoldIt.woff", woff,
-                                               "../fonts/SourceSansPro/BoldIt.ttf", truetype,
-                                               "../fonts/SourceSansPro/BoldIt.svg", svg),
-                                               "../fonts/SourceSansPro/BoldIt.eot", bold, italic);
-
+@include font-face("SourceSansPro", font-files("#{$font-path}/SourceSansPro/Light.woff", woff,
+                                               "#{$font-path}/SourceSansPro/Light.ttf", truetype,
+                                               "#{$font-path}/SourceSansPro/Light.svg", svg),
+                                               "#{$font-path}/SourceSansPro/Light.eot", 300);
+@include font-face("SourceSansPro", font-files("#{$font-path}/SourceSansPro/LightIt.woff", woff,
+                                               "#{$font-path}/SourceSansPro/LightIt.ttf", truetype,
+                                               "#{$font-path}/SourceSansPro/LightIt.svg", svg),
+                                               "#{$font-path}/SourceSansPro/LightIt.eot", 300, italic);
+@include font-face("SourceSansPro", font-files("#{$font-path}/SourceSansPro/Bold.woff", woff,
+                                               "#{$font-path}/SourceSansPro/Bold.ttf", truetype,
+                                               "#{$font-path}/SourceSansPro/Bold.svg", svg),
+                                               "#{$font-path}/SourceSansPro/Bold.eot", bold);
+@include font-face("SourceSansPro", font-files("#{$font-path}/SourceSansPro/BoldIt.woff", woff,
+                                               "#{$font-path}/SourceSansPro/BoldIt.ttf", truetype,
+                                               "#{$font-path}/SourceSansPro/BoldIt.svg", svg),
+                                               "#{$font-path}/SourceSansPro/BoldIt.eot", bold, italic);
 @include font-face("orreicon", font-files("#{$font-path}/orreicon.woff", woff,
                                           "#{$font-path}/orreicon.ttf", truetype,
                                           "#{$font-path}/orreicon.svg", svg),
