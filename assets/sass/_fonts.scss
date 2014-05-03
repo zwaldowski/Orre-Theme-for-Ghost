@@ -1,5 +1,7 @@
 @import "compass/css3/font-face";
 
+$font-path: "../fonts" !default;
+
 @include font-face("SourceSansPro", font-files("../fonts/SourceSansPro/Light.woff", woff,
                                                "../fonts/SourceSansPro/Light.ttf", truetype,
                                                "../fonts/SourceSansPro/Light.svg", svg),
@@ -17,7 +19,64 @@
                                                "../fonts/SourceSansPro/BoldIt.svg", svg),
                                                "../fonts/SourceSansPro/BoldIt.eot", bold, italic);
 
+@include font-face("orreicon", font-files("#{$font-path}/orreicon.woff", woff,
+                                          "#{$font-path}/orreicon.ttf", truetype,
+                                          "#{$font-path}/orreicon.svg", svg),
+                                          "#{$font-path}/orreicon.eot");
+
 $font-size: 62.5%;
 $font-base: 'SourceSansPro', 'Helvetica Neue', 'Helvetica', Arial, sans-serif;
 $font-weight-light: 300;
 $font-weight-bold: bold;
+
+$icon-css-prefix: icon !default;
+
+$icon-var-tag: "\e809";
+$icon-var-instapaper: "\e807";
+$icon-var-calendar: "\e80f";
+$icon-var-down-open: "\e80d";
+$icon-var-angle-circled-left: "\e80e";
+$icon-var-angle-circled-right: "\e80a";
+$icon-var-left-circled: "\e80b";
+$icon-var-right-circled: "\e80c";
+$icon-var-rss: "\e808";
+$icon-var-facebook-squared: "\e806";
+$icon-var-github: "\e802";
+$icon-var-gplus-squared: "\e803";
+$icon-var-gplus: "\e801";
+$icon-var-twitter-squared: "\e805";
+$icon-var-twitter: "\e800";
+$icon-var-adn: "\e804";
+
+.#{$icon-css-prefix}-tag:before { content: $icon-var-tag; }
+.#{$icon-css-prefix}-instapaper:before { content: $icon-var-instapaper; }
+.#{$icon-css-prefix}-calendar:before { content: $icon-var-calendar; }
+.#{$icon-css-prefix}-down-open:before { content: $icon-var-down-open; }
+.#{$icon-css-prefix}-angle-circled-left:before { content: $icon-var-angle-circled-left; }
+.#{$icon-css-prefix}-angle-circled-right:before { content: $icon-var-angle-circled-right; }
+.#{$icon-css-prefix}-left-circled:before { content: $icon-var-left-circled; }
+.#{$icon-css-prefix}-right-circled:before { content: $icon-var-right-circled; }
+.#{$icon-css-prefix}-rss:before { content: $icon-var-rss; }
+.#{$icon-css-prefix}-facebook-squared:before { content: $icon-var-facebook-squared; }
+.#{$icon-css-prefix}-github:before { content: $icon-var-github; }
+.#{$icon-css-prefix}-gplus-squared:before { content: $icon-var-gplus-squared; }
+.#{$icon-css-prefix}-gplus:before { content: $icon-var-gplus; }
+.#{$icon-css-prefix}-twitter-squared:before { content: $icon-var-twitter-squared; }
+.#{$icon-css-prefix}-twitter:before { content: $icon-var-twitter; }
+.#{$icon-css-prefix}-adn:before { content: $icon-var-adn; }
+
+.#{$icon-css-prefix} {
+  font-family: "orreicon";
+  font-style: normal;
+  font-weight: normal;
+  speak: none;
+  display: inline-block;
+  width: 1em;
+  margin-right: .2em;
+  text-align: center;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}

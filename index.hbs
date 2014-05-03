@@ -12,16 +12,16 @@
             <h1 class="blog-title">{{@blog.title}}</h1>
             <h2 class="blog-description">{{@blog.description}}</h2>
 			<p class="social-links">
-                <a href="https://github.com/zwaldowski"><i class="icon-github"></i></a>
-                <a href="https://twitter.com/zwaldowski"><i class="icon-twitter"></i></a>
-                <a href="https://alpha.app.net/zw"><i class="icon-adn"></i></a>
-                <a href="https://google.com/+zacharywaldowski"><i class="icon-gplus"></i></a>
-                <a href="{{@blog.url}}/rss/"><i class="icon-rss"></i></a>
+                <a href="https://github.com/zwaldowski"><i class="icon icon-github"></i></a>
+                <a href="https://twitter.com/zwaldowski"><i class="icon icon-twitter"></i></a>
+                <a href="https://alpha.app.net/zw"><i class="icon icon-adn"></i></a>
+                <a href="https://google.com/+zacharywaldowski"><i class="icon icon-gplus"></i></a>
+                <a href="{{@blog.url}}/rss/"><i class="icon icon-rss"></i></a>
 
 			</p>
         </div>
     </div>
-	<div class="animated fadeIn delay-1s chevron-down"><a href="#main-content"><i class="icon-down-open animated pulse delay-2s loop-3x"></i></a></div>
+	<div class="animated fadeIn delay-1s chevron-down"><a href="#main-content"><i class="icon icon-down-open animated wobble delay-2s loop-3x"></i></a></div>
 </header>
 
 {{! The main content area on the homepage }}
@@ -34,10 +34,10 @@
 
         <header class="post-header">
             <h2 class="post-title"><a href="{{url}}">{{{title}}}</a></h2>
-			<span class="post-meta"><i class="icon-calendar"></i> <time datetime="{{date format='YYYY-MM-DD'}}">{{date format="DD MMM YYYY"}}</time></span>
+			<span class="post-meta"><i class="icon icon-calendar"></i> <time datetime="{{date format='YYYY-MM-DD'}}">{{date format="DD MMM YYYY"}}</time></span>
 			{{#if tags}}
 			<span class="post-tags">
-				<i class="icon-tag"></i>
+				<i class="icon icon-tag"></i>
 				{{#tags}}
 					{{name}}
 				{{/tags}}
@@ -46,7 +46,7 @@
         </header>
         <section class="post-excerpt">
             <p>{{excerpt}}&hellip;</p>
-			<p><a href="{{url}}" class="read-more">Read the rest <i class="icon-angle-circled-right"></i></a></p>
+			<p><a href="{{url}}" class="read-more">Read the rest <i class="icon icon-angle-circled-right"></i></a></p>
         </section>
     </article>
 
