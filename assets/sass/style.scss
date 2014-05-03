@@ -1,4 +1,9 @@
 /* Reset */
+$browser-minimum-versions: (
+    'ie':      "8"
+);
+$strict-normalize: true;
+
 @import "normalize";
 
 /* Colors and variables */
