@@ -1,0 +1,58 @@
+@import "compass/css3/transform";
+@import "compass/css3/transition";
+@import "compass/css3/inline-block";
+@import "compass/css3/border-radius";
+@import "compass/css3/box-shadow";
+@import "compass/css3/text-shadow";
+
+.hint, [data-hint] {
+	position: relative;
+	@include inline-block('none');
+
+	&:before, &:after {
+		position: absolute;
+
+		@include translate3d(0, 0, 0);
+		@include opacity(0);
+		@include single-transition(all, $hintAnimationDuration, ease);
+		visibility: hidden;
+		pointer-events: none;
+		z-index: $hintZIndex;
+
+		bottom: 100%;
+		left: 50%;
+	}
+
+	&:hover:before, &:hover:after,
+	&:focus:before, &:focus:after {
+		@include translateY(-#{$hintTransitionDistance});
+		@include opacity(1);
+		visibility: visible;
+	}
+
+	// Tooltip arrow
+	&:before {
+		content: '';
+		position: absolute;
+		background: transparent;
+		border: $hintArrowHeight solid transparent;
+		z-index: $hintZIndex + 1;
+		border-top-color: $primary-color;
+		margin-bottom: -2 * $hintArrowHeight;
+	}
+
+	// Tooltip body
+	&:after {
+		content: attr(data-hint);
+		padding: $hintPadding;
+		font-size: $hintFontSize;
+		line-height: $hintFontSize;
+		background: $primary-color;
+		margin-left: -1 * $hintArrowOffset;
+		color: #fff;
+		white-space: nowrap;
+		@include border-radius(0.8rem, 0.8rem);
+		@include single-box-shadow(4px, 4px, 8px, 0, rgba(0, 0, 0, 0.3));
+		@include single-text-shadow(0, -1px, 0, 0, darken($primary-color, 25%));
+	}
+}

@@ -1,2 +1,10 @@
 $my-animation-duration: 0.54365s;
 $medium-breakpoint: "screen and (min-width : 600px)";
+
+$hintAnimationDuration: 0.54365s;
+$hintFontSize: 1.1rem;
+$hintPadding: 0.8rem 1rem;
+$hintArrowHeight: 0.5rem;
+$hintArrowOffset: 3 * $hintArrowHeight;
+$hintTransitionDistance: 0.5rem;
+$hintZIndex: 1000000;

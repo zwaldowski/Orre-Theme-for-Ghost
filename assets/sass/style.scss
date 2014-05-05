@@ -16,6 +16,9 @@ $strict-normalize: true;
 /* Effects */
 @import "animations";
 
+/* Tooltip */
+@import "tooltip";
+
 /* Compass imports */
 @import "compass/css3/border-radius";
 @import "compass/css3/box-sizing";
