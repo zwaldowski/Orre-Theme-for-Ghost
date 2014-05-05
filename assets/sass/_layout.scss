@@ -48,6 +48,8 @@ a {
 		.blog-description {
 			font-size: 2rem;
 			font-style: italic;
+			margin: 0 auto;
+			max-width: 80%;
 
 			@media #{$medium-breakpoint} {
 				font-size: 3rem;
