@@ -8,13 +8,7 @@
         {{#if @blog.logo}}<a id="blog-logo" href="{{@blog.url}}"><img src="{{@blog.logo}}" alt="Blog Logo" /></a>{{/if}}
         <h1 class="blog-title"><a href="/">{{@blog.title}}</a></h1>
         <h2 class="blog-description">{{@blog.description}}</h2>
-		<p class="social-links">
-            <a href="https://github.com/zwaldowski"><i class="icon icon-github"></i></a>
-            <a href="https://twitter.com/zwaldowski"><i class="icon icon-twitter"></i></a>
-            <a href="https://alpha.app.net/zw"><i class="icon icon-adn"></i></a>
-            <a href="https://google.com/+zacharywaldowski"><i class="icon icon-gplus"></i></a>
-            <a href="{{@blog.url}}/rss/"><i class="icon icon-rss"></i></a>
-		</p>
+        {{> social-links}}
     </div>
 </header>
 
@@ -28,23 +22,25 @@
         {{! Everything below outputs content of the the post which has been published }}
 
         <h1 class="post-title">{{{title}}}</h1>
-		<span class="post-meta"><i class="icon icon-calendar"></i> <time datetime="{{date format='YYYY-MM-DD'}}">{{date format="DD MMM YYYY"}}</time></span>
-		{{#if tags}}
-		<span class="post-tags">
-			<i class="icon icon-tag"></i>
-			{{#tags}}
-				{{name}}
-			{{/tags}}
-		</span>
-		{{/if}}
+        <span class="post-meta"><i class="icon icon-calendar"></i> <time datetime="{{date format='YYYY-MM-DD'}}">{{date format="DD MMM YYYY"}}</time></span>
+        {{#if tags}}
+        <span class="post-tags">
+            <i class="icon icon-tag"></i>
+            {{#tags}}
+                {{name}}
+            {{/tags}}
+        </span>
+        {{/if}}
         <section class="post-content">
             {{content}}
         </section>
         {{#if author}}
+          {{#author}}
             <section class="author">
-                <h5>by {{author.name}}</h5>
+                <h5>by <a href="{{url}}">{{name}}</a></h5>
                 <p>{{author.bio}}</p>
             </section>
+          {{/author}}
         {{/if}}
         <footer class="post-footer">
             <section class="share">
@@ -61,15 +57,15 @@
                    onclick="window.open(this.href, 'google-plus-share', 'width=490,height=530');return false;">
                     <i class="icon icon-gplus-squared"></i>
                 </a>
-    		</section>
-			<section class="save-for-later">
-				<h4>Or read it later, using</h4>
-				<a href="http://www.instapaper.com/hello2?url={{url absolute="true"}}&title={{{title}}}"><i class="icon icon-instapaper"></i>Instapaper</a>
-			</section>
-			<section class="go-back">
-				<h4>Or just</h4>
-				<a href="/"><i class="icon icon-angle-circled-left"></i>go back to the index page</a>
-			</section>
+            </section>
+            <section class="save-for-later">
+                <h4>Or read it later, using</h4>
+                <a href="http://www.instapaper.com/hello2?url={{url absolute="true"}}&title={{{title}}}"><i class="icon icon-instapaper"></i>Instapaper</a>
+            </section>
+            <section class="go-back">
+                <h4>Or just</h4>
+                <a href="/"><i class="icon icon-angle-circled-left"></i>go back to the index page</a>
+            </section>
         </footer>
 
         {{/post}}
